@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse Dark Matter Dining restaurants by city, cuisine, menu, deposit, and price range." />
+  <meta name="keywords" content="Dark Matter Dining, restaurants, Melbourne, Brisbane, Sydney, reservation" />
+  <meta name="author" content="Cameron Evans - 103564648" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+  <title>Dark Matter Dining - Restaurants</title>
+</head>
+
+<body>
+
+<header>
+  <h1><img class="brand-logo" src="images/logo.png" width="1254" height="1254" alt="" aria-hidden="true" /><span>Dark Matter Dining</span></h1>
+  <nav class="top_nav" aria-label="Main navigation">
+    <a href="index.html"><span>Home</span></a>
+    <a class="active" href="restaurants.html"><span>Restaurants</span></a>
+    <a href="recommend.html"><span>Recommendations</span></a>
+    <a href="reservation.html"><span>Reservation</span></a>
+    <a href="register.html"><span>Register</span></a>
+    <a href="bill.html"><span>Calculator</span></a>
+  </nav>
+</header>
+
+<main class="restaurants">
+
+  <section class="intro">
+    <h2>City Dining Guide</h2>
+    <p>Browse Dark Matter Dining by city, with prices, cuisine styles, locations, deposits, menus, and booking options kept close together for quick comparison.</p>
+  </section>
+
+  <div class="city-layout">
+
+    <section class="city melbourne" aria-labelledby="melbourne-heading">
+      <h2 id="melbourne-heading">Melbourne</h2>
+
+      <article class="card feature" id="event_horizon">
+        <div class="picture">
+          <img src="images/event_horizon.png" width="1672" height="941" loading="lazy" alt="Grilled steak, burger, chicken, and salad for Event Horizon" />
+        </div>
+
+        <div class="card-body">
+          <div class="card-head">
+            <p class="name">Event Horizon</p>
+            <p class="deposit">Deposit: $20</p>
+            <p class="price">Price range: $20-$63 per person</p>
+          </div>
+
+          <p class="cuisine">Cuisine: Outback BBQ</p>
+          <p class="location">Location: Melbourne CBD</p>
+          <p class="meta">Dietary: None listed</p>
+          <p class="meta">Budget: Medium</p>
+          <p class="meta">Suitable for: Date, business, family</p>
+          <p class="description">Event Horizon is a bold Outback BBQ venue built around smoky grilled meats, dark slate plating, and a lively city dining room. It suits families who want generous sharing dishes, dates who like a dramatic setting, and business groups after a relaxed but memorable meal. Start with Darkside Burgers for something casual, or order Solar Steaks and Charcoal Chicken if you want the full fire-grilled experience.</p>
+          <ul class="menu">
+            <li>darkside Burgers - $20</li>
+            <li>Solar Steaks - $55</li>
+            <li>Charcoal Chicken - $25</li>
+            <li>Star Salad - $15</li>
+            <li>Beer - $8</li>
+          </ul>
+
+          <div class="actions">
+            <a class="reserve button_link" href="reservation.html?r=event_horizon">Make a Reservation</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="city brisbane" aria-labelledby="brisbane-heading">
+      <h2 id="brisbane-heading">Brisbane</h2>
+
+      <div class="brisbane-grid">
+        <article class="card compact" id="nebula_noodles">
+          <div class="picture">
+            <img src="images/nebula_noodles.png" width="1672" height="941" loading="lazy" alt="Steaming bowl of noodles with egg and sliced meat for Nebula Noodles" />
+          </div>
+
+          <div class="card-body">
+            <div class="card-head">
+              <p class="name">Nebula Noodles</p>
+              <p class="deposit">Deposit: $20</p>
+              <p class="price">Price range: $20-$35 per person</p>
+            </div>
+
+            <p class="cuisine">Cuisine: Pan-Asian</p>
+            <p class="location">Location: South Brisbane</p>
+            <p class="meta">Dietary: Vegetarian, vegan</p>
+            <p class="meta">Budget: Low</p>
+            <p class="meta">Suitable for: Family</p>
+            <p class="description">Nebula Noodles is a lively Pan-Asian noodle bar with warm broth, fast service, and a relaxed communal feel. It suits families and casual groups who want filling food without a formal dining room. The Black Sesame Ramen is a strong choice for rich flavour, while Vegan Dan Dan Noodles and Spring Rolls give vegetarian and vegan diners plenty to enjoy.</p>
+            <ul class="menu">
+              <li>Black Sesame Ramen - $22</li>
+              <li>Vegan Dan Dan Noodles - $20</li>
+              <li>Prawn Laksa - $24</li>
+              <li>Spring Rolls - $12</li>
+              <li>Iced Tea - $6</li>
+            </ul>
+
+            <div class="actions">
+              <a class="reserve button_link" href="reservation.html?r=nebula_noodles">Make a Reservation</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card compact" id="pulsar_pizza">
+          <div class="picture">
+            <img src="images/pulsar_pizza.png" width="1672" height="941" loading="lazy" alt="Wood-fired pizza in front of an oven for Pulsar Pizza" />
+          </div>
+
+          <div class="card-body">
+            <div class="card-head">
+              <p class="name">Pulsar Pizza</p>
+              <p class="deposit">Deposit: $15</p>
+              <p class="price">Price range: $18-$40 per person</p>
+            </div>
+
+            <p class="cuisine">Cuisine: Neapolitan Italian</p>
+            <p class="location">Location: Fortitude Valley</p>
+            <p class="meta">Dietary: Vegetarian</p>
+            <p class="meta">Budget: Low</p>
+            <p class="meta">Suitable for: Family, date</p>
+            <p class="description">Pulsar Pizza is a relaxed Neapolitan Italian spot centred on a wood-fired oven, crisp crusts, and simple ingredients. It works well for family dinners, group catch-ups, and easy date nights where the food can be shared. Order the Margherita for a classic choice, the Diavola for heat, or the Truffle Funghi when you want something richer.</p>
+            <ul class="menu">
+              <li>Margherita Pizza - $19</li>
+              <li>Diavola Pizza - $23</li>
+              <li>Truffle Funghi Pizza - $26</li>
+              <li>Garlic Bread - $10</li>
+              <li>Soft Drink - $5</li>
+            </ul>
+
+            <div class="actions">
+              <a class="reserve button_link" href="reservation.html?r=pulsar_pizza">Make a Reservation</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="city sydney" aria-labelledby="sydney-heading">
+      <h2 id="sydney-heading">Sydney</h2>
+
+      <div class="sydney-list">
+        <article class="card wide" id="quantum_quiche">
+          <div class="picture">
+            <img src="images/quantum_quiche.png" width="1672" height="941" loading="lazy" alt="Duck confit plate with salad and red wine for Quantum Quiche" />
+          </div>
+
+          <div class="row-content">
+            <div class="row-meta">
+              <p class="name">Quantum Quiche</p>
+              <p class="deposit">Deposit: $25</p>
+              <p class="price">Price range: $35-$60 per person</p>
+              <p class="cuisine">Cuisine: Modern French</p>
+              <p class="location">Location: Surry Hills</p>
+              <p class="meta">Dietary: Vegetarian</p>
+              <p class="meta">Budget: Medium</p>
+              <p class="meta">Suitable for: Date, business</p>
+            </div>
+
+            <div>
+              <p class="description">Quantum Quiche is a calm Modern French bistro with low lighting, polished service, and a quieter pace than the casual venues. It suits dates and business meals where conversation matters as much as the food. The Duck Confit is the main dish to choose for a special meal, while the Vegetable Quiche and Creme Brulee make it welcoming for vegetarian diners and dessert lovers.</p>
+              <ul class="menu">
+                <li>Duck Confit - $42</li>
+                <li>Croque Madame - $24</li>
+                <li>Vegetable Quiche - $22</li>
+                <li>Creme Brulee - $16</li>
+                <li>French Wine - $14</li>
+              </ul>
+            </div>
+            <a class="reserve button_link" href="reservation.html?r=quantum_quiche">Make a Reservation</a>
+          </div>
+        </article>
+
+        <article class="card wide" id="stellar_sushi">
+          <div class="picture">
+            <img src="images/stellar_sushi.png" width="1672" height="941" loading="lazy" alt="Assorted sushi and sashimi platter for Stellar Sushi" />
+          </div>
+
+          <div class="row-content">
+            <div class="row-meta">
+              <p class="name">Stellar Sushi</p>
+              <p class="deposit">Deposit: $30</p>
+              <p class="price">Price range: $40-$80 per person</p>
+              <p class="cuisine">Cuisine: Traditional Japanese</p>
+              <p class="location">Location: Darling Harbour</p>
+              <p class="meta">Dietary: None listed</p>
+              <p class="meta">Budget: High</p>
+              <p class="meta">Suitable for: Date, business</p>
+            </div>
+
+            <div>
+              <p class="description">Stellar Sushi is a refined Japanese restaurant built around fresh fish, careful presentation, and a quiet dining room near Darling Harbour. It is best suited to dates, business dinners, and guests who want a slower, more polished meal. Choose the Omakase Set for the full experience, or order the Sashimi Platter and Dragon Roll if you want to share several clean, seafood-focused dishes.</p>
+              <ul class="menu">
+                <li>Omakase Set - $75</li>
+                <li>Dragon Roll - $28</li>
+                <li>Sashimi Platter - $55</li>
+                <li>Miso Soup - $7</li>
+                <li>Green Tea - $5</li>
+              </ul>
+            </div>
+            <a class="reserve button_link" href="reservation.html?r=stellar_sushi">Make a Reservation</a>
+          </div>
+        </article>
+
+        <article class="card wide" id="cosmic_curry">
+          <div class="picture">
+            <img src="images/cosmic_curry.png" width="1672" height="941" loading="lazy" alt="Indian curry, biryani, paneer, naan, and spices for Cosmic Curry" />
+          </div>
+
+          <div class="row-content">
+            <div class="row-meta">
+              <p class="name">Cosmic Curry</p>
+              <p class="deposit">Deposit: $20</p>
+              <p class="price">Price range: $25-$45 per person</p>
+              <p class="cuisine">Cuisine: North Indian</p>
+              <p class="location">Location: Parramatta</p>
+              <p class="meta">Dietary: Vegetarian, halal</p>
+              <p class="meta">Budget: Medium</p>
+              <p class="meta">Suitable for: Family, business</p>
+            </div>
+
+            <div>
+              <p class="description">Cosmic Curry is a warm North Indian restaurant with rich sauces, fragrant rice, grilled paneer, and a comfortable group-friendly atmosphere. It suits families, business meals, and diners looking for vegetarian, halal, or gluten-free options. Butter Chicken and Lamb Biryani are strong mains for meat eaters, while Paneer Tikka, Garlic Naan, and Mango Lassi make the meal generous and easy to share.</p>
+              <ul class="menu">
+                <li>Butter Chicken - $24</li>
+                <li>Lamb Biryani - $26</li>
+                <li>Paneer Tikka - $22</li>
+                <li>Garlic Naan - $6</li>
+                <li>Mango Lassi - $7</li>
+              </ul>
+            </div>
+            <a class="reserve button_link" href="reservation.html?r=cosmic_curry">Make a Reservation</a>
+          </div>
+        </article>
+
+        <article class="card wide" id="singularity_seoul">
+          <div class="picture">
+            <img src="images/singularity_seoul.png" width="1672" height="941" loading="lazy" alt="Korean BBQ grill with beef bulgogi, pork belly, galbi, banchan, and drinks for Singularity Seoul" />
+          </div>
+
+          <div class="row-content">
+            <div class="row-meta">
+              <p class="name">Singularity Seoul</p>
+              <p class="deposit">Deposit: $25</p>
+              <p class="price">Price range: $35-$70 per person</p>
+              <p class="cuisine">Cuisine: Korean BBQ</p>
+              <p class="location">Location: Strathfield</p>
+              <p class="meta">Dietary: Gluten-free, dairy-free</p>
+              <p class="meta">Budget: Medium</p>
+              <p class="meta">Suitable for: Family, business</p>
+            </div>
+
+            <div>
+              <p class="description">Singularity Seoul is a lively Korean BBQ venue in Strathfield built around tabletop grills, sizzling marinades, and sharing-style dining. It suits families who enjoy interactive meals and business groups looking for something social but still polished. Start with Beef Bulgogi or Galbi Short Rib for rich marinated flavour, add Samgyeopsal Pork Belly for the grill, and balance the table with Kimchi and Banchan.</p>
+              <ul class="menu">
+                <li>Beef Bulgogi - $34</li>
+                <li>Samgyeopsal Pork Belly - $36</li>
+                <li>Galbi Short Rib - $44</li>
+                <li>Kimchi and Banchan - $12</li>
+                <li>Korean Pear Soda - $7</li>
+              </ul>
+            </div>
+            <a class="reserve button_link" href="reservation.html?r=singularity_seoul">Make a Reservation</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </div>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Cameron Evans - Dark Matter Dining.</p>
+</footer>
+</body>
+</html>

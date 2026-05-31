@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Reserve a table at any Dark Matter Dining restaurant. Choose your date, party size, and payment method." />
+  <meta name="keywords" content="Dark Matter Dining, reservation, booking, table, deposit" />
+  <meta name="author" content="Cameron Evans - 103564648" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+  <title>Dark Matter Dining - Reservation</title>
+</head>
+
+<body>
+
+<header>
+  <h1><img class="brand-logo" src="images/logo.png" width="1254" height="1254" alt="" aria-hidden="true" /><span>Dark Matter Dining</span></h1>
+  <nav class="top_nav" aria-label="Main navigation">
+    <a href="index.html"><span>Home</span></a>
+    <a href="restaurants.html"><span>Restaurants</span></a>
+    <a href="recommend.html"><span>Recommendations</span></a>
+    <a class="active" href="reservation.html"><span>Reservation</span></a>
+    <a href="register.html"><span>Register</span></a>
+    <a href="bill.html"><span>Calculator</span></a>
+  </nav>
+</header>
+
+<main class="reservation">
+
+  
+  <section class="sidebar">
+
+    <h2>Booking Info</h2>
+
+    <p>A deposit is required to secure your reservation. The amount varies by restaurant and is applied to your final bill on arrival.</p>
+    <p><strong>Voucher:</strong> Enter a valid voucher code at checkout</p>
+    <p><strong>Online payment:</strong> Visa, Mastercard or Amex  accepted.</p>
+    <p>Reservations must be made for a future date and time. Same-day bookings are accepted up to one hour before the desired time.</p>
+    <p>For special dietary needs or accessibility requirements, use the Special Requests field.</p>
+    
+   <section class="calc-promo">
+    <h2>Budgeting Your Meal?</h2>
+    <p>Feel free to use our bill calculator below to help manage your budget</p> 
+    <a href="bill.html" class = "calc_button button_link">Calculator</a>
+   </section>
+
+
+
+  </section>
+
+  
+  <section class="resform">
+    <h2>Make a Reservation</h2>
+
+    <form id="reservation-form" method="POST" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" novalidate>
+      <div class="resfields">
+
+        
+        <label for="res-fullname">
+          Full Name
+          <input type="text" id="res-fullname" name="fullname" autocomplete="name" />
+          <span class="error-msg" id="err-fullname" role="alert"></span>
+        </label>
+
+        <label for="res-email">
+          Email Address
+          <input type="email" id="res-email" name="email" autocomplete="email" />
+          <span class="error-msg" id="err-email" role="alert"></span>
+        </label>
+
+        <label for="res-phone">
+          Phone Number
+          <input type="tel" id="res-phone" name="phone" autocomplete="tel" />
+          <span class="error-msg" id="err-phone" role="alert"></span>
+        </label>
+
+        
+        <label for="res-restaurant">
+          Restaurant
+          <select id="res-restaurant" name="restaurant">
+            <option value="">Select a restaurant...</option>
+            <option value="event_horizon">Event Horizon - Modern Australian</option>
+            <option value="nebula_noodles">Nebula Noodles - Pan-Asian</option>
+            <option value="pulsar_pizza">Pulsar Pizza - Neapolitan Italian</option>
+            <option value="quantum_quiche">Quantum Quiche - Modern French</option>
+            <option value="stellar_sushi">Stellar Sushi - Traditional Japanese</option>
+            <option value="cosmic_curry">Cosmic Curry - North Indian</option>
+            <option value="singularity_seoul">Singularity Seoul - Korean BBQ</option>
+          </select>
+          <span class="error-msg" id="err-restaurant" role="alert"></span>
+        </label>
+
+        
+        <label for="res-datetime">
+          Reservation Date & Time
+          <input type="datetime-local" id="res-datetime" name="datetime" />
+          <span class="error-msg" id="err-datetime" role="alert"></span>
+        </label>
+
+       
+        <label for="res-people">
+          Number of People
+          <input type="number" id="res-people" name="people" min="1" value="" />
+          <span class="error-msg" id="err-people" role="alert"></span>
+        </label>
+
+        
+        <label for="res-special" class="wide">
+          Special Requests <em style="font-weight:normal;font-size:11px;">(optional)</em>
+          <textarea id="res-special" name="special-requests" placeholder="Dietary requirements, accessibility needs, occasions..."></textarea>
+        </label>
+
+       
+        <label for="res-deposit">
+          Deposit Amount
+          <input type="text" id="res-deposit" name="deposit" readonly placeholder="Select a restaurant above" />
+          <span class="deposit-info" id="deposit-info"></span>
+        </label>
+
+        
+        <label for="res-method">
+          Deposit Method
+          <select id="res-method" name="deposit-method">
+            <option value="">Select...</option>
+            <option value="voucher">Voucher</option>
+            <option value="online">Online Payment</option>
+          </select>
+          <span class="error-msg" id="err-method" role="alert"></span>
+        </label>
+
+       
+        <label for="res-voucher" id="voucher-row" hidden>
+          Voucher Code
+          <input type="text" id="res-voucher" name="voucher" maxlength="12" placeholder="enter a valid code" />
+          <span class="error-msg" id="err-voucher" role="alert"></span>
+        </label>
+
+       
+        <label for="res-card-type" id="card-type-row" hidden>
+          Card Type
+          <select id="res-card-type" name="card-type">
+            <option value="">Select...</option>
+            <option value="visa">Visa</option>
+            <option value="mastercard">Mastercard</option>
+            <option value="amex">American Express</option>
+          </select>
+          <span class="error-msg" id="err-card-type" role="alert"></span>
+        </label>
+
+        
+        <label for="res-card-number" id="card-number-row" hidden>
+          Credit Card Number
+          <input type="text" id="res-card-number" name="card-number" placeholder="enter a valid card type" />
+          <span class="error-msg" id="err-card-number" role="alert"></span>
+        </label>
+
+       
+        <div class="wide">
+          <label for="res-billing-email">
+            Billing Email Address
+            <input type="email" id="res-billing-email" name="billing-email" autocomplete="email" />
+            <span class="error-msg" id="err-billing-email" role="alert"></span>
+          </label>
+
+          <div class="same-email-row">
+            <input type="checkbox" id="same-email" name="same-email" />
+            <label for="same-email" style="color:#000;font-size:12px;">Same as email address above</label>
+          </div>
+
+        </div>
+
+        <button type="submit">Confirm Reservation</button>
+
+      </div>
+    </form>
+
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Cameron Evans - Dark Matter Dining.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Get a personalised restaurant recommendation from Dark Matter Dining based on your dietary preferences, budget, and dining purpose." />
+  <meta name="keywords" content="Dark Matter Dining, recommendation, restaurant, Melbourne, dining" />
+  <meta name="author" content="Cameron Evans - 103564648" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+  
+  <title>Dark Matter Dining - Recommendations</title>
+</head>
+
+<body>
+
+<header>
+  <h1><img class="brand-logo" src="images/logo.png" width="1254" height="1254" alt="" aria-hidden="true" /><span>Dark Matter Dining</span></h1>
+  <nav class="top_nav" aria-label="Main navigation">
+    <a href="index.html"><span>Home</span></a>
+    <a href="restaurants.html"><span>Restaurants</span></a>
+    <a class="active" href="recommend.html"><span>Recommendations</span></a>
+    <a href="reservation.html"><span>Reservation</span></a>
+    <a href="register.html"><span>Register</span></a>
+    <a href="bill.html"><span>Calculator</span></a>
+  </nav>
+</header>
+
+<main class="recommendations">
+
+  <!-- Sidebar -->
+  <section class="sidebar">
+    <h2>How It Works</h2>
+    <p>Answer three quick questions and our rule-based engine will match you with the best restaurants on the platform.</p>
+    <p><strong>Dietary preference</strong> filters out unsuitable venues. Selecting Vegan or Halal strictly limits results to compliant restaurants.</p>
+    <p><strong>Budget range</strong> compares your expected spend per person against each restaurant's average price range.</p>
+    <p><strong>Dining purpose</strong> matches the venue's atmosphere and style to your occasion.</p>
+    <p>Up to three recommendations are shown, ranked by relevance. Select one and click <strong>Reserve This Restaurant</strong> to pre-fill the booking form.</p>
+  </section>
+
+  <!-- Recommendation form -->
+  <section class="recform">
+    <h2>Find Your Restaurant</h2>
+    <form id="rec-form" novalidate>
+      <div class="fields">
+
+        <fieldset class="rec-dietary">
+          <legend>Dietary Preferences</legend>
+          <label><input type="checkbox" name="dietary" value="vegetarian" /> Vegetarian</label>
+          <label><input type="checkbox" name="dietary" value="vegan" /> Vegan</label>
+          <label><input type="checkbox" name="dietary" value="halal" /> Halal</label>
+          <label><input type="checkbox" name="dietary" value="gluten-free" /> Gluten-Free</label>
+          <label><input type="checkbox" name="dietary" value="dairy-free" /> Dairy-Free</label>
+          <label><input type="checkbox" name="dietary" value="none" id="rec-dietary-none" /> No preference</label>
+          <span class="error-msg" id="err-dietary" role="alert" style="display:block;width:100%;"></span>
+        </fieldset>
+
+        <label for="rec-budget">
+          Budget per Person
+          <select id="rec-budget" name="budget">
+            <option value="">Select...</option>
+            <option value="low">Low - under $35</option>
+            <option value="medium">Mid - $35 to $65</option>
+            <option value="high">High - over $65</option>
+          </select>
+        </label>
+
+        <label for="rec-purpose">
+          Dining Purpose
+          <select id="rec-purpose" name="purpose">
+            <option value="">Select...</option>
+            <option value="family">Family outing</option>
+            <option value="date">Romantic date</option>
+            <option value="business">Business meal</option>
+          </select>
+        </label>
+
+        <button type="submit">Get Recommendations</button>
+
+      </div>
+      <p id="rec-error" class="error-msg" role="alert"></p>
+    </form>
+  </section>
+
+  <!-- Results (hidden until JS populates) -->
+  <section class="result" id="rec-results" hidden>
+    <h2>Your Recommendations</h2>
+    <div class="result-cards" id="result-cards" aria-live="polite"></div>
+    <div class="result-actions">
+      <a href="#" id="reserve-link" class="button_link">Reserve This Restaurant</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Cameron Evans - Dark Matter Dining.</p>
+</footer>
+
+
+</body>
+</html>
